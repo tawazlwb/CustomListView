@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CustomListView</string>
+    <string name="action_settings">Settings</string>
+    <string name="top_movies">Top 10 Movies</string>
+
+    <string-array name="movie_titles">
+        <item>Predestination</item>
+        <item>The dark knight</item>
+        <item>The netebook</item>
+        <item>American sniper</item>
+        <item>Bird man</item>
+        <item>The imitation game</item>
+        <item>Interstellar</item>
+        <item>Selma</item>
+        <item>Foxcatcher</item>
+        <item>Fury</item>
+    </string-array>
+
+    <string-array name="movie_ratings">
+        <item>Rating: 7.4/10</item>
+        <item>Rating: 9/10</item>
+        <item>Rating: 8/10</item>
+        <item>Rating: 7.5/10</item>
+        <item>Rating: 8.1/10</item>
+        <item>Rating: 8.2/10</item>
+        <item>Rating: 8.8/10</item>
+        <item>Rating: 7.6/10</item>
+        <item>Rating: 7.2/10</item>
+        <item>Rating: 7.7/10</item>
+    </string-array>
+</resources>
