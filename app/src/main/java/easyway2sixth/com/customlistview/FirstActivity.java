@@ -8,13 +8,36 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class FirstActivity extends AppCompatActivity {
+
+    ListView listView;
+    int[] movie_poster_ressource = {R.drawable.movie, R.drawable.movie, R.drawable.movie, R.drawable.movie, R.drawable.movie,
+            R.drawable.movie, R.drawable.movie, R.drawable.movie, R.drawable.movie, R.drawable.movie};
+    String[] movie_titles;
+    String[] movie_ratings;
+    MovieAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
+
+        listView = (ListView) findViewById(R.id.list_view);
+        movie_titles = getResources().getStringArray(R.array.movie_titles);
+        movie_ratings = getResources().getStringArray(R.array.movie_ratings);
+        adapter = new MovieAdapter(getApplicationContext(), R.layout.raw_layout);
+        listView.setAdapter(adapter);
+        int i = 0;
+
+        for(String title : movie_titles){
+            MovieDataProvider movieDataProvider = new MovieDataProvider(movie_poster_ressource[i], title, movie_ratings[i]);
+            adapter.add(movieDataProvider);
+            i++;
+        }
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
